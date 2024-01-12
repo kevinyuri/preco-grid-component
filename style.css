@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: hsl(204, 43%, 93%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-card {
+  max-width: 650px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.main-card > div {
+  display: flex;
+  flex-direction: column;
+  padding: 38px 38px 16px 38px;
+}
+
+.intro-section {
+  grid-column: 1 / span 2;
+  background-color: #fff;
+}
+
+.intro-section > h1 {
+  font-size: 24px;
+  color: hsl(179, 62%, 43%);
+}
+
+.intro-section > p {
+  color: hsl(218, 22%, 67%);
+  line-height: 1.5;
+}
+
+.intro-section > p:first-of-type {
+  color: hsl(71, 73%, 54%);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 24px 0 8px 0;
+}
+
+.intro-section > p:last-of-type {
+  margin-bottom: 24px;
+}
+
+.sign-section {
+  background-color: hsl(179, 62%, 43%);
+}
+
+.sign-section span {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.sign-section p:first-of-type {
+  color: hsla(203, 44%, 93%, 0.6);
+  margin-bottom: 18px;
+}
+
+.sign-section p:last-of-type {
+  color: hsla(203, 44%, 93%);
+  margin-bottom: 28px;
+}
+
+.sign-section a {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  background-color: hsl(71, 73%, 54%);
+  padding: 14px 0;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.sign-section h2,
+.why-section h2 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.why-section {
+  background-color: hsla(179, 62%, 43%, 0.7);
+  list-style: none;
+}
+
+.why-section ul {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.why-section li {
+  font-size: 14px;
+  color: hsl(204, 43%, 93%);
+  margin-bottom: 5px;
+}
+
+@media (max-width: 670px) {
+  body {
+    padding: 24px;
+  }
+
+  .main-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .main-card > div {
+    padding: 24px 24px 16px 24px;
+  }
+  .intro-section {
+    grid-column: 1;
+  }
+
+  .intro-section > h1 {
+    font-size: 22px;
+  }
+
+  .intro-section > p:first-of-type {
+    font-size: 16px;
+    margin-bottom: 22px;
+  }
+
+  .intro-section > p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .intro-section > p:last-of-type {
+    margin-bottom: 12px;
+  }
+}
